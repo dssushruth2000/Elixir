@@ -28,7 +28,7 @@ To run the Elixir project locally, follow these steps:
 python -m venv venv
 source venv/bin/activate
 # On Windows use
-`venv\Scripts\activate`
+venv\Scripts\activate
 ```
 
 
