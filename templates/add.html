@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<section class="section-content">
+    <div class="container">
+      <header class="section-heading">
+        <html lang="en">
+            <body style="background-color:rgb(242, 174, 174);">
+             
+            
+            <head>
+            <meta charset="utf-8">
+            <meta http-equiv="pragma" content="no-cache" />
+            <meta http-equiv="cache-control" content="max-age=604800" />
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            
+            <title>{{title.capitalize()}} | ELIXIR</title>
+            
+            <link href="/static/images/logo.PNG" rel="shortcut icon" type="image/x-icon">
+            <script src="https://kit.fontawesome.com/c96d3752b6.js" crossorigin="anonymous"></script>
+            <!-- jQuery -->
+            <script src="/static/js/jquery-2.0.0.min.js" type="text/javascript"></script>
+            
+            <!-- Bootstrap4 files-->
+            <script src="/static/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+            <link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+            
+            <!-- Font awesome 5 -->
+            
+            
+            <!-- custom style -->
+            <link href="/static/css/ui.css" rel="stylesheet" type="text/css"/>
+            <link rel="stylesheet" href="/static/css/style.css" type="text/css" />
+            <link href="/static/css/responsive.css" rel="stylesheet" media="only screen and (max-width: 1200px)" />
+            
+            <!-- custom javascript -->
+            <script src="/static/js/script.js" type="text/javascript"></script>
+            <script src="/static/js/ajax.js" type="text/javascript"></script>
+            <script type="text/javascript">
+            /// some script
+            
+            // jquery ready start
+            $(document).ready(function() {
+              // jQuery code
+            
+            }); 
+            // jquery end
+            </script>
+            
+            </head>
+            
+            
+            
+            <header class="section-header">
+            
+            
+            <section class="header-main border-bottom">
+              <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-2 col-6">
+                <a href="/" class="brand-wrap">
+                  <img class="logo" src="/static/images/logo.png">
+                </a> <!-- brand-wrap.// -->
+              </div>
+              <div class="col-lg-6 col-12 col-sm-12">
+                <form action="#" class="search">
+                  
+                </form> <!-- search-wrap .end// -->
+            
+                <!-- Search Results -->
+            <div class="search-results mt-2 border w-100 bg-white">
+             <div class="container">
+            </div>
+            </div>
+        </header>
+            
+               
+<head>
+<title>Admin</title>
+</head>
+<style> 
+    input[type=text] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+    }
+    input[type=submit] {
+        background-color: #04AA6D;
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+    textarea {
+        width: 100%;
+        height: 150px;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        font-size: 16px;
+        resize: none;
+    }
+    </style>
+<body>
+
+    <section class="section-intro padding-y-sm">
+        <div class="container">
+        <h2>Add items</h2>
+        <form action="/addItem" method="POST" enctype="multipart/form-data">
+	        Name: <input type="text" name="name"><br>
+	        Price: <input type="text" name="price"><br>
+	        Description: <textarea name="description" rows=3 cols="40"></textarea><br>
+	        Image: <input type="file" name="image"><br>
+	        Stock: <input type="text" name="stock"><br>
+	        Category: <select name="category">
+		        {% for row in categories %}
+		        	<option value="{{row[0]}}">{{row[1]}}</option>
+		        {% endfor %}
+	</select>
+    <br>
+	<input type="submit">
+</form>
+</body>
+</html>
+

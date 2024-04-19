@@ -1,0 +1,61 @@
+{% include "base.html" %}
+<section class="section-content">
+  <div class="container">
+    <header class="section-heading">
+
+    </header>
+<html>
+
+<body>
+<div id="title">
+
+
+
+
+</div>
+<table>
+	<tr>
+			
+<div id="display">
+	<td>
+	<div id="productName">
+		<h1>{{data[1]}}</h1>
+	</div>
+	<div>
+		<img src={{url_for('static', filename='uploads/'+data[4]) }} id="productImage" width = 400 height=400 	/>
+	</div>
+	</td>
+	<td>
+	<div id="productDescription">
+		<h2>Details</h2>
+		<table id="descriptionTable">
+			<tr>
+				<td>Name  </td>
+				<td> : {{data[1]}}</td>
+			</tr>
+			<tr>
+				<td>Price</td>
+				<td>: ₹ {{data[2]}}</td>
+			</tr>
+			<tr>
+				<td>Stock</td>
+				<td>: {{data[5]}}</td>
+			</tr>
+		</table>
+		<h2>Description</h2>
+		<p>{{data[3]}}</p>
+	</div>
+	<br>
+
+
+
+	<div id="addToCart">
+		<a href="/addToCart?productId={{request.args.get('productId')}}" class="btn  btn-outline-primary text-uppercase">Add to Cart</a>
+	</div>
+	</td>
+</tr>
+</table>
+</div>
+</body>
+</html>
+

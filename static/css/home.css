@@ -1,0 +1,43 @@
+
+#itemImage {
+	height: 200px;
+	width: 150px;
+}
+
+.display {
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+table {
+	border-spacing: 100px;
+	text-align: center;
+	font-weight: bold;
+	font-family: "Times New Roman", Times, serif;
+	text-decoration-color: black;
+}
+
+#productName {
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+	font-weight: bold;
+	font-family: "Times New Roman", Times, serif;
+	text-decoration-color: black;
+
+}
+
+#productPrice {
+	text-align: center;
+}
+
+.displayCategory ul li {
+	font-family: "Times New Roman", Times, serif;
+	text-align: center;
+	font-weight: bold;
+	font-size: 100px;
+}

@@ -1,0 +1,267 @@
+{% include "base.html" %}
+<section class="section-content">
+  <div class="container">
+    <header class="section-heading">
+
+    </header>
+<html>
+<head>
+	<style>
+		table, th,td {
+      column-width: 100px;
+}
+	 </style>
+<title style="background-color:rgb(249, 44, 8);">Category: {{categoryName}}</title>
+</head>
+<body>
+
+          <!-- ========================= SECTION INTRO ========================= -->
+          <style>
+            
+            
+            
+            
+            
+         
+            
+            /* The dots/bullets/indicators */
+            .dot {
+              height: 15px;
+              width: 15px;
+              margin: 0 2px;
+              background-color: #bbb;
+              border-radius: 50%;
+              display: inline-block;
+              transition: background-color 1s ease;
+            }
+            
+            
+            
+            /* Fading animation */
+            .fade {
+              animation-name: fade;
+              animation-duration: 3s;
+            }
+            
+            @keyframes fade {
+              from {opacity: .4} 
+              to {opacity: 1}
+            }
+            
+            /* On smaller screens, decrease text size */
+            @media only screen and (max-width: 300px) {
+              .text {font-size: 11px}
+            }
+            </style>
+            </head>
+            <body>
+            
+            
+            
+            <div class="slideshow-container">
+            
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 4</div>
+              <img src="/static/images/banners/5.JPG" style="width:100%">
+              
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 4</div>
+              <img src="/static/images/banners/7.jpg" style="width:100%">
+              
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 4</div>
+              <img src="/static/images/banners/8.jpg" style="width:100%">
+              
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">4 / 4</div>
+              <img src="/static/images/banners/logo1.png" style="width:100%">
+
+            </div>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+              <span class="dot"></span>
+            </div>
+            
+            <script>
+            let slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}    
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+            </script>
+            <!-- ========================= SECTION INTRO END// ========================= -->
+          
+            <div class="display">
+              <div class="displayCategory">
+                <h2>Shop by Category: </h2>
+                
+                  {% for row in categoryData %}
+                  <a href="/displayCategory?categoryId={{row[0]}}" class="btn">{{row[1]}}</a></li>
+                  {% endfor %}
+                
+              </div>
+              <table>
+              <br>
+              <div >
+                <h2>Items</h2>
+                {% for data in itemData %}
+                <table>
+                  <tr id="productName" >
+                    {% for row in data %}
+                    <td>
+                      {{row[1]}} 
+                    </td>
+                    {% endfor %}
+                  </tr>
+                  <tr id="productImage">
+                    {% for row in data %}
+                    <td>
+                      <a href="/productDescription?productId={{row[0]}}"><br>
+                        <img src={{ url_for('static', filename='uploads/' + row[4]) }} id="itemImage" width = 200 height="200"   /> 
+                        
+
+                      </a>
+                    </td>
+                    {% endfor %}
+                  </tr>
+                  <tr id="productPrice" height=50>
+                    {% for row in data %}
+                    <td>
+                      Get @ ₹ {{row[2]}}/-
+                    </td height=40>
+                    {% endfor %}
+                  </tr height=100>
+                </table>
+                {% endfor %}
+              </div>
+            </div>
+
+
+
+
+<!-- ========================= SECTION FEATURE ========================= -->
+<section class="section-content padding-y-sm">
+<div class="container">
+<article class="card card-body">
+
+
+<div class="row">
+  <div class="col-md-4">  
+    <figure class="item-feature">
+      <span class="text-primary"><i class="fa fa-2x fa-truck"></i></span>
+      <figcaption class="pt-3">
+        <h5 class="title">Fast delivery</h5>
+      </figcaption>
+    </figure> <!-- iconbox // -->
+  </div><!-- col // -->
+  <div class="col-md-4">
+    <figure  class="item-feature">
+      <span class="text-primary"><i class="fa fa-2x fa-landmark"></i></span>  
+      <figcaption class="pt-3">
+        <h5 class="title">Creative Strategy</h5>
+      </figcaption>
+    </figure> <!-- iconbox // -->
+  </div><!-- col // -->
+    <div class="col-md-4">
+    <figure  class="item-feature">
+      <span class="text-primary"><i class="fa fa-2x fa-lock"></i></span>
+      <figcaption class="pt-3">
+        <h5 class="title">High secured </h5>
+
+      </figcaption>
+    </figure> <!-- iconbox // -->
+  </div> <!-- col // -->
+</div>
+</article>
+
+</div> <!-- container .//  -->
+</section>
+<!-- ========================= SECTION FEATURE END// ========================= -->
+
+
+
+
+
+<!-- ========================= FOOTER ========================= -->
+<footer class="section-footer border-top bg">
+  <div class="container">
+    <section class="footer-top  padding-y">
+      <div class="row">
+
+        <aside class="col-md col-6">
+          <h6 class="title">Company</h6>
+          <ul class="list-unstyled">
+            <li> <a href="/about">About us</a></li>
+            <li> <a href="/findus">Find a store</a></li>
+            <li> <a href="/tac">T&C</a></li>
+            
+          </ul>
+        </aside>
+        <aside class="col-md col-6">
+          <h6 class="title">Help</h6>
+          <ul class="list-unstyled">
+            <li> <a href="/contact">Contact us</a></li>
+            
+          </ul>
+        </aside>
+
+        <aside class="col-md">
+          <h6 class="title">Social</h6>
+          <ul class="list-unstyled">
+            <li><a href="https://www.facebook.com/"> <i class="fab fa-facebook"></i> Facebook </a></li>
+            <li><a href="https://twitter.com/i/flow/login/"> <i class="fab fa-twitter"></i> Twitter </a></li>
+            <li><a href="https://www.instagram.com/accounts/login/"> <i class="fab fa-instagram"></i> Instagram </a></li>
+            
+          </ul>
+        </aside>
+      </div> <!-- row.// -->
+    </section>  <!-- footer-top.// -->
+
+    <section class="footer-bottom row">
+      <div class="col-md-2">
+        <p class="text-muted">  ELIXIR </p>
+      </div>
+      <div class="col-md-8 text-md-center">
+        <span  class="px-2">info@elixir.io</span>
+        <span  class="px-2">+91 987654321</span>
+        <span  class="px-2">DSATM, Bangalore </span>
+      </div>
+      <div class="col-md-2 text-md-right text-muted">
+        <i class="fab fa-lg fa-cc-visa"></i>
+        <i class="fab fa-lg fa-cc-paypal"></i>
+        <i class="fab fa-lg fa-cc-mastercard"></i>
+      </div>
+    </section>
+  </div><!-- //container -->
+</footer>
+<!-- ========================= FOOTER END // ========================= -->
+
+
+</body>
+</html>
