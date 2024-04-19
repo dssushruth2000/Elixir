@@ -48,7 +48,7 @@ Run the Application
 ```bash
 python main.py
 ```
-The application will be available on http://127.0.0.1:5000/ in your web browser.
+The application will be available on http://127.0.0.1:5000/ in your web browser. Preferably use Mozilla Firefox
 
 ## Usage
 After starting the application, you can:
